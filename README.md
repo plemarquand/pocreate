@@ -25,3 +25,11 @@ var pos = {'english.po': '...'};
 var pocreate = require('pocreate');
 var updatedPos = pocreate.parse(src, pos);
 ```
+
+## Dependencies
+
+PoCreate depends on two great modules, [jsxgettext](https://github.com/plemarquand/jsxgettext) and
+[gettext-parser](https://github.com/andris9/gettext-parser).
+
+Currently it relies on a forked version of jsxgettext which adds pluralization and multiline contextual comments for
+translators.
