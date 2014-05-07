@@ -62,4 +62,14 @@ describe('pocreate', function() {
     // Don't replace the existing key
     expect(parsed.translations['']['Key 2'].msgstr[0]).to.equal('Key 2');
   });
+
+  it('parse should add keys to an empty po', function() {
+    var poFilename = path.join('fixtures', 'empty.po');
+    var pos = filemap([poFilename]);
+    var src = filemap([path.join('fixtures', 'missing_key_in_po.js')]);
+    var resultPos = this.instance.parse(pos, src, this.options);
+    var parsed = poParser.po.parse(resultPos[poFilename]);
+
+    expect(parsed.translations['']['Key 1'].msgstr).to.be.instanceof(Array);
+  });
 });

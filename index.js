@@ -39,6 +39,10 @@ module.exports = (function() {
 
       //TODO: extract
       _.each(existingPos, function(existing) {
+
+        // If the supplied PO is empty, the lhs will be undefined with no path.
+        existing.translations[''] = existing.translations[''] || {'':{}};
+
         var lhs = existing.translations[''];
         var rhs = srcPo.translations[''];
         deepDiff.observableDiff(lhs, rhs, function(diff) {
