@@ -19,10 +19,10 @@
     "url": "https://github.com/plemarquand/pocreate/issues"
   },
   "dependencies": {
-    "lodash": "^2.4.1",
-    "gettext-parser": "^0.2.0",
+    "lodash": "~2.4.1",
+    "gettext-parser": "~0.2.0",
     "jsxgettext": "git://github.com/plemarquand/jsxgettext",
-    "deep-diff": "^0.1.7"
+    "deep-diff": "~0.1.7"
   },
   "devDependencies": {
     "chai": "~1.8.1",
