@@ -1,5 +1,4 @@
 var expect = require('chai').expect,
-  pocreate = require('..'),
   poParser = require('gettext-parser'),
   fs = require('fs'),
   path = require('path'),
@@ -14,7 +13,7 @@ function filemap(files) {
 
 describe('pocreate', function() {
   beforeEach(function() {
-    this.instance = pocreate();
+    this.instance = require('..');
     this.options = {
       keyword: ['tr'],
       add_comments: '/'

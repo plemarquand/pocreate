@@ -3,7 +3,7 @@ var poParser = require('gettext-parser');
 var jsParser = require('jsxgettext');
 var deepDiff = require('deep-diff');
 
-module.exports = function () {
+module.exports = (function() {
 
   function inspect(arg) {
     return require('util').inspect(arg, {depth:10});
@@ -61,4 +61,4 @@ module.exports = function () {
       }, {});
     }
   };
-};
+})();
