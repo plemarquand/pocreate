@@ -1,6 +1,6 @@
 {
   "name": "pocreate",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Creates or updates .po files from code and templates",
   "main": "index.js",
   "scripts": {
